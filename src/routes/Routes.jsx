@@ -8,8 +8,8 @@ import PrivateRoutes from "./PrivateRoute";
 import ShowProducts from "../components/Home/ShowProducts";
 import Update from "../components/Home/Update";
 import ProductDetails from "../components/Home/ProductDetails";
-import MyCard from "../components/Mycard/MyCard";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import MyCart from "../components/Mycart/MyCart";
 
 const router = createBrowserRouter([
     {
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
             },
             {
                 path : "/mycart",
-                element : <PrivateRoutes><MyCard></MyCard></PrivateRoutes>,
+                element : <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
                 loader :() => fetch('http://localhost:5000/cart')
             },
             {
