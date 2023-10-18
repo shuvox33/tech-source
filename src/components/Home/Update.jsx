@@ -1,41 +1,15 @@
+import { useLoaderData, useParams } from "react-router-dom";
 
 const Update = () => {
+
+    const {_id} = useParams();
+    const products = useLoaderData();
+    const product = products.find(product => product._id === _id)
+    console.log(product);
+
     return (
-        <div className="mt-8 w-full max-w-6xl mx-auto">
-            <h3 className="text-center text-4xl">Add Product </h3>
-            <form >
-                <div className="max-w-4xl mx-auto flex flex-col gap-3">
-                    <label className="text-xl" htmlFor="image">Image url : </label>
-                    <input className=" w-full h-10 rounded-lg border border-orange-200 border-" type="text" name="image" id="image" placeholder="  Image url" />
-                </div>
-                <div className="max-w-4xl mx-auto flex flex-col gap-3">
-                    <label className="text-xl" htmlFor="name">Name : </label>
-                    <input className=" w-full h-10 rounded-lg border border-orange-200 border-" type="text" name="name" id="name" placeholder="  Name" />
-                </div>
-                <div className="max-w-4xl mx-auto flex flex-col gap-3">
-                    <label className="text-xl" htmlFor="brand">Brand Name : </label>
-                    <input className=" w-full h-10 rounded-lg border border-orange-200 border-" type="text" name="brand" id="brand" placeholder="  Brand Name" />
-                </div>
-                <div className="max-w-4xl mx-auto flex flex-col gap-3">
-                    <label className="text-xl" htmlFor="type">Type : </label>
-                    <input className=" w-full h-10 rounded-lg border border-orange-200 border-" type="text" name="type" id="type" placeholder="  Type" />
-                </div>
-                <div className="max-w-4xl mx-auto flex flex-col gap-3">
-                    <label className="text-xl" htmlFor="price">Price : </label>
-                    <input className=" w-full h-10 rounded-lg border border-orange-200 border-" type="text" name="price" id="price" placeholder="  price" />
-                </div>
-                <div className="max-w-4xl mx-auto flex flex-col gap-3">
-                    <label className="text-xl" htmlFor="description">Short Description : </label>
-                    <input className=" w-full h-10 rounded-lg border border-orange-200 border-" type="text" name="description" id="description" placeholder="  description" />
-                </div>
-                <div className="max-w-4xl mx-auto flex flex-col gap-3">
-                    <label className="text-xl" htmlFor="rating">Rating : </label>
-                    <input className=" w-full h-10 rounded-lg border border-orange-200 border-" type="text" name="rating" id="rating" placeholder="  rating" />
-                </div>
-                <div className="text-center mt-5">
-                    <button className=" text-white bg-orange-500 px-4 py-2 rounded-lg ">Add Product</button>
-                </div>
-            </form>
+        <div>
+            <h3>update </h3>
         </div>
     );
 };

@@ -7,6 +7,8 @@ import AddProduct from "../components/AddProduct/AddProduct";
 import PrivateRoutes from "./PrivateRoute";
 import ShowProducts from "../components/Home/ShowProducts";
 import Update from "../components/Home/Update";
+import ProductDetails from "../components/Home/ProductDetails";
+import MyCard from "../components/Mycard/MyCard";
 
 const router = createBrowserRouter([
     {
@@ -27,21 +29,30 @@ const router = createBrowserRouter([
                 element : <SignUp></SignUp>
             },
             {
+                path : "/:name",
+                element : <ShowProducts></ShowProducts>
+            },
+            {
                 path : "/addproduct",
                 element : <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
             },
             {
-                path : "/:name",
-                element : <ShowProducts></ShowProducts>,
+                path : "/mycart",
+                element : <PrivateRoutes><MyCard></MyCard></PrivateRoutes>
+            },
+            {
+                path : "/update/:_id",
+                element : <Update></Update>,
                 loader : ()=> fetch('http://localhost:5000/product')
             },
             {
-                path : "/:_id",
-                element : <Update></Update>,
-
+                path : "/details/:_id",
+                element : <ProductDetails></ProductDetails>,
+                loader : ()=> fetch('http://localhost:5000/product')
             }
         ]
     },
 ]);
 
 export default router;
+                    

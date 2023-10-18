@@ -21,7 +21,7 @@ const Nav = () => {
             <div className='text-base md:text-xl space-x-10'>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/addproduct'>Add Product</NavLink>
-                <NavLink to='/addproduct'>My card </NavLink>
+                <NavLink to='/mycart'>My card </NavLink>
                 {
                     
                         user ? <>
