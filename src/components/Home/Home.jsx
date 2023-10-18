@@ -1,7 +1,12 @@
+import { useLoaderData } from "react-router-dom";
+import Brands from "./Brands";
 
 const Home = () => {
+
+    const brands = useLoaderData();
+
     return (
-        <div>
+        <div >
             {/* banner */}
             <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
@@ -14,6 +19,17 @@ const Home = () => {
                 </div>
             </div>
 
+            <div className="max-w-6xl mx-auto">
+                {/* brands */}
+                <div className="my-10">
+                    <h3 className="text-center text-4xl my-7">Brands</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 ">
+                        {
+                            brands.map(brands => <Brands key={brands.id} brands={brands}></Brands>)
+                        }
+                    </div>
+                </div>
+            </div>
 
 
             {/* footer */}

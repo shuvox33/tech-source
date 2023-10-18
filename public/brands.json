@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Apple",
+        "image_url": "https://i.ibb.co/qjGRCK0/png-apple-logo-9735.png"
+    },
+    {
+        "name": "Google",
+        "image_url": "https://i.ibb.co/Vj8bXgN/google-logo-history-png-2603.png"
+    },
+    {
+        "name": "Samsung",
+        "image_url": "https://i.ibb.co/ZK4vpTb/samsung-logo-png-1300.png"
+    },
+    {
+        "name": "Asus",
+        "image_url": "https://i.ibb.co/ChmwcXx/logo-asus-png-7174.png"
+    },
+    {
+        "name": "Xiaomi",
+        "image_url": "https://i.ibb.co/PY5xkTv/xiaomi-33334.png"
+    },
+    {
+        "name": "Intel",
+        "image_url": "https://i.ibb.co/SBNC7Jy/intel-png-logo-4130.png"
+    }
+] 

@@ -1,48 +1,9 @@
-import Swal from 'sweetalert2'
 
-const AddProduct = () => {
-
-    const handleAddProduct = (e) => {
-        e.preventDefault();
-        const result = e.target;
-        const imageUrl = result.image.value;
-        const name = result.name.value;
-        const brand = result.brand.value;
-        const type = result.price.value;
-        const price = result.price.value;
-        const description = result.description.value;
-        const rating = result.rating.value;
-
-        const newProduct = { imageUrl, name, brand, type, price, description, rating }
-
-        //send data to server
-        fetch('http://localhost:5000/product', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newProduct)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: 'Success!',
-                        text: 'User Added Successfully',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    })
-                }
-            })
-
-
-
-    }
+const Update = () => {
     return (
         <div className="mt-8 w-full max-w-6xl mx-auto">
             <h3 className="text-center text-4xl">Add Product </h3>
-            <form onSubmit={handleAddProduct}>
+            <form >
                 <div className="max-w-4xl mx-auto flex flex-col gap-3">
                     <label className="text-xl" htmlFor="image">Image url : </label>
                     <input className=" w-full h-10 rounded-lg border border-orange-200 border-" type="text" name="image" id="image" placeholder="  Image url" />
@@ -79,4 +40,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default Update;
