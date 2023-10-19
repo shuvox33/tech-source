@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import Swal from 'sweetalert2'
 
 const ShowCartProduct = ({ product }) => {
@@ -6,8 +7,9 @@ const ShowCartProduct = ({ product }) => {
     const {_id} = product;
     const { imageUrl, name, brand, price, rating } = product.product;
 
+    const [users, setUsers] = useState(product)
+
     const handleDelete = _id => {
-        console.log(_id);
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -18,14 +20,15 @@ const ShowCartProduct = ({ product }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/cart/${_id}`, {
+                fetch(`https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/cart/${_id}`, {
                     method: 'DELETE'
 
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
                         if (data.deletedCount > 0) {
+                            const remainingUsers = users.filter(user => user._id != _id);
+                            setUsers(remainingUsers);
                             Swal.fire(
                                 'Deleted!',
                                 'Your product has been deleted.',

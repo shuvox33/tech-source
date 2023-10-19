@@ -20,7 +20,7 @@ const router = createBrowserRouter([
             {
                 path : "/",
                 element : <Home></Home>,
-                loader : ()=> fetch('../../public/brands.json')
+                loader : ()=> fetch('/brands.json')
             },
             {
                 path : "/login",
@@ -41,17 +41,17 @@ const router = createBrowserRouter([
             {
                 path : "/mycart",
                 element : <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-                loader :() => fetch('http://localhost:5000/cart')
+                loader :() => fetch('https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/cart')
             },
             {
                 path : "/update/:id",
                 element : <PrivateRoutes><Update></Update></PrivateRoutes>,
-                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
+                loader : ({params})=> fetch(`https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/product/${params.id}`)
             },
             {
                 path : "/details/:_id",
                 element : <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader : ()=> fetch('http://localhost:5000/product')
+                loader : ()=> fetch('https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/product')
             }
         ]
     },

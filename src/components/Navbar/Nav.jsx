@@ -27,7 +27,7 @@ const Nav = () => {
                     {
 
                         user ? <>
-                            <span className='sm:hidden'>{user.displayName}</span>
+                            <span className=''>{user.displayName}</span>
                             <figure className=" ml-3 ">
                                 <img className="max-h-10 rounded-full" src={user.photoURL} alt="" />
                             </figure>

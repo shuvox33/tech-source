@@ -16,7 +16,7 @@ const ProductDetails = () => {
     const newProduct = { product, email: user.email }
 
     const handleAddCart = () => {
-        fetch('http://localhost:5000/cart', {
+        fetch('https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -25,7 +25,7 @@ const ProductDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
