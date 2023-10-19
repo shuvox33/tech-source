@@ -11,7 +11,6 @@ const ProductDetails = () => {
     const product = products.find(product => product._id === _id)
 
     const { user } = useContext(AuthContext)
-    console.log(user.email);
 
     const { imageUrl, name, brand, type, price, rating, description } = product;
     const newProduct = { product, email: user.email }

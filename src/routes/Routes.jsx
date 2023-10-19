@@ -44,9 +44,9 @@ const router = createBrowserRouter([
                 loader :() => fetch('http://localhost:5000/cart')
             },
             {
-                path : "/update/:_id",
+                path : "/update/:id",
                 element : <PrivateRoutes><Update></Update></PrivateRoutes>,
-                loader : ()=> fetch('http://localhost:5000/product')
+                loader : ({params})=> fetch(`http://localhost:5000/product/${params.id}`)
             },
             {
                 path : "/details/:_id",
@@ -58,4 +58,3 @@ const router = createBrowserRouter([
 ]);
 
 export default router;
-                    

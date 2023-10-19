@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 const ShowProduct = ({ product }) => {
 
 
@@ -22,9 +22,9 @@ const ShowProduct = ({ product }) => {
                 </div>
                 <div className='  flex justify-between px-3'>
                     <h3 className='text-lg font-semibold'>Rating : {rating}</h3>
-                    <NavLink to={`/update/${_id}`}>
+                    <Link to={`/update/${_id}`}>
                         <button className='px-3 py-1 bg-slate-800 text-white rounded-lg'>Update</button>
-                    </NavLink>
+                    </Link>
                 </div>
                 <div className=' text-center px-3 pb-3'>
                     <NavLink to={`/details/${_id}`}>

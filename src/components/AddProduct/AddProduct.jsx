@@ -36,9 +36,8 @@ const AddProduct = () => {
                 }
             })
 
-
-
     }
+    
     return (
         <div className="mt-8 w-full max-w-6xl mx-auto">
             <h3 className="text-center text-4xl">Add Product </h3>
