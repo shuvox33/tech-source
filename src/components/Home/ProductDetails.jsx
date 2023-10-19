@@ -16,7 +16,7 @@ const ProductDetails = () => {
     const newProduct = { product, email: user.email }
 
     const handleAddCart = () => {
-        fetch('https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/cart', {
+        fetch('https://a10-tech-source-server.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

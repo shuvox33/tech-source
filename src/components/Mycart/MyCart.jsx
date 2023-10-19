@@ -26,7 +26,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/cart/${_id}`, {
+                fetch(`https://a10-tech-source-server.vercel.app/cart/${_id}`, {
                     method: 'DELETE'
 
                 })

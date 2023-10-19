@@ -20,7 +20,7 @@ const Update = () => {
         const updatedProduct = { imageUrl, name, brand, type, price, rating }
 
         //send data to server
-        fetch(`https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/product/${_id}`, {
+        fetch(`https://a10-tech-source-server.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

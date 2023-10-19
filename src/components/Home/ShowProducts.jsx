@@ -9,7 +9,7 @@ const ShowProducts = () => {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/product')
+        fetch('https://a10-tech-source-server.vercel.app/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     },[])

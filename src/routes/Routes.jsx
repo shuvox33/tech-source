@@ -41,17 +41,17 @@ const router = createBrowserRouter([
             {
                 path : "/mycart",
                 element : <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-                loader :() => fetch('https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/cart')
+                loader :() => fetch('https://a10-tech-source-server.vercel.app/cart')
             },
             {
                 path : "/update/:id",
                 element : <PrivateRoutes><Update></Update></PrivateRoutes>,
-                loader : ({params})=> fetch(`https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/product/${params.id}`)
+                loader : ({params})=> fetch(`https://a10-tech-source-server.vercel.app/product/${params.id}`)
             },
             {
                 path : "/details/:_id",
                 element : <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-                loader : ()=> fetch('https://a10-tech-source-server-eek4bsgeb-shakib-hassan-shuvos-projects.vercel.app/product')
+                loader : ()=> fetch('https://a10-tech-source-server.vercel.app/product')
             }
         ]
     },
