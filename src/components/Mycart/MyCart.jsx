@@ -49,7 +49,7 @@ const MyCart = () => {
 
     return (
         <div className="max-w-6xl mx-auto my-10">
-            <h3 className="text-4xl text-center my-5">Product in Cart</h3>
+            {/* <h3 className="text-4xl text-center my-5">Product in Cart</h3> */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {
                     finalProducts.map(product => <div key={product.product._id}>
@@ -58,11 +58,11 @@ const MyCart = () => {
                                 <figure className='h-full'>
                                     <img className='h-full w-full object-contain' src={product.product.imageUrl} alt="" />
                                 </figure>
-                                <div className=' text-lg font-semibold flex justify-between px-3'>
+                                <div className=' text-lg font-semibold  justify-between px-3'>
                                     <h3>Name : {product.product.name}</h3>
                                     <h3>Brand : {product.product.brand}</h3>
                                 </div>
-                                <div className=' text-lg font-semibold flex justify-between px-3'>
+                                <div className=' text-lg font-semibold  justify-between px-3'>
                                     <h3>Price : {product.product.price}</h3>
                                     <h3 className=''>Rating : {product.product.rating}</h3>
                                 </div>
@@ -75,6 +75,9 @@ const MyCart = () => {
                     </div>)
                 }
             </div>
+            {
+                (finalProducts.length == 0) && <h3 className="text-4xl text-center">No Product in Cart</h3>
+            }
         </div>
     );
 };

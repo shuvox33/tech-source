@@ -14,12 +14,12 @@ const ShowProduct = ({ product }) => {
                 <figure className='h-full'>
                     <img className='h-full w-full object-contain' src={imageUrl} alt="" />
                 </figure>
-                <div className=' text-lg font-semibold flex justify-between px-3'>
+                <div className=' text-lg font-semibold  justify-between px-3'>
                     <h3>Name : {name}</h3>
                     <h3>Brand : {brand}</h3>
                 </div>
-                <div className=' text-lg font-semibold flex justify-between px-3'>
-                    <h3>Price : {price}</h3>
+                <div className=' text-lg font-semibold  justify-between px-3'>
+                    <h3>Price : {price} TK</h3>
                     <h3>Type : {type}</h3>
                 </div>
                 <div className='  flex justify-between px-3'>

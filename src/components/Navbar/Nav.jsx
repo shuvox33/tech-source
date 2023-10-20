@@ -14,7 +14,7 @@ const Nav = () => {
     }
 
     const links = <>
-        <nav className="text-lg space-x-5">
+        <nav className="text-lg font-semibold space-x-5">
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/addproduct'>Add Product</NavLink>
             <NavLink to='/mycart'>My card </NavLink>

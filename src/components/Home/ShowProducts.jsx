@@ -30,7 +30,7 @@ const ShowProducts = () => {
             .then(data => setProducts(data));
     }, [])
 
-    const selected = products.filter(product => product.brand === name.toLocaleLowerCase());
+    const selected = products.filter(product => product.brand === name);
     const settings = {
         dots: true,
         infinite: true,
@@ -57,7 +57,7 @@ const ShowProducts = () => {
                 </Slider>
             </div>
 
-            <div className="mt-10 ">
+            <div className="mt-10 max-w-6xl mx-auto ">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                     {
 
