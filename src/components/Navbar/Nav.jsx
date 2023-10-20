@@ -54,10 +54,7 @@ const Nav = () => {
                             <button onClick={handleLogOut} className=" ml-4 px-3 py-1 rounded-lg bg-orange-500 text-white">Log Out</button>
                         </>
                             : <NavLink to={'/signup'}><button className="bg-orange-500  px-3 py-1 text-white rounded-lg">Sign Up</button></NavLink>
-
                     }
-
-
 
                 </div>
             </div>

@@ -39,32 +39,39 @@ const ShowProducts = () => {
         slidesToScroll: 1
     };
 
-        return (
-            <div className="my-10 ">
+    return (
+        <div className="my-10 ">
 
-                <div className="max-w-2xl mx-auto">
-                    <Slider {...settings}>
-                        {
-                            data.map(d =>
-                                <div className="my-8" key={d.id}>
-                                    <figure className="max-h-72">
-                                        <img className="w-full h-full object-cover" src={d.image_url} alt="" />
-                                    </figure>
-                                </div>
-                            )
-
-                        }
-                    </Slider>
-                </div>
-
-                {/* <h3 className="text-5xl text-center my-5">Product of : {name}</h3> */}
-                <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div className="max-w-2xl mx-auto">
+                <Slider {...settings}>
                     {
+                        data.map(d =>
+                            <div className="my-8" key={d.id}>
+                                <figure className="max-h-72">
+                                    <img className="w-full h-full object-cover" src={d.image_url} alt="" />
+                                </figure>
+                            </div>
+                        )
+
+                    }
+                </Slider>
+            </div>
+
+            <div className="mt-10 ">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                    {
+
                         selected.map(product => <ShowProduct key={product._id} product={product}></ShowProduct>)
+
                     }
                 </div>
-            </div>
-        );
-    };
+                {
+                    (selected.length == 0) && <span> <h3 className="text-4xl text-center my-10">No product found</h3></span>
+                }
 
-    export default ShowProducts;
+            </div>
+        </div>
+    );
+};
+
+export default ShowProducts;
