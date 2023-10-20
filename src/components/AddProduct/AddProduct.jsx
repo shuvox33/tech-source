@@ -8,7 +8,7 @@ const AddProduct = () => {
         const imageUrl = result.image.value;
         const name = result.name.value;
         const brand = result.brand.value;
-        const type = result.price.value;
+        const type = result.type.value;
         const price = result.price.value;
         const description = result.description.value;
         const rating = result.rating.value;
@@ -29,7 +29,7 @@ const AddProduct = () => {
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'User Added Successfully',
+                        text: 'Product Added Successfully',
                         icon: 'success',
                         confirmButtonText: 'OK'
                     })

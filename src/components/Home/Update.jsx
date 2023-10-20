@@ -13,7 +13,7 @@ const Update = () => {
         const imageUrl = result.image.value;
         const name = result.name.value;
         const brand = result.brand.value;
-        const type = result.price.value;
+        const type = result.type.value;
         const price = result.price.value;
         const rating = result.rating.value;
 

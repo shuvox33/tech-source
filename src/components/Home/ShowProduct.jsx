@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link, NavLink } from 'react-router-dom';
+
+
 const ShowProduct = ({ product }) => {
 
 
